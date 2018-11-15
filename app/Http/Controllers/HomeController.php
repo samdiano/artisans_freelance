@@ -604,6 +604,7 @@ class HomeController extends Controller
         return back()->with($notification);
     }
 
+        
     public function editResume()
     {
         if (Auth::user()->type == 1) {

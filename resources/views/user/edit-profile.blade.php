@@ -123,7 +123,7 @@
                                         <select name="category_id">
                                             <option value="">Select a Job Type</option>
                                             @foreach($category as $item)
-                                                <option value="{{$item->id}}">{{$item->name}}</option>
+                                                <option value="{{$item->name}}">{{$item->name}}</option>
                                             @endforeach
                                         </select>
                                     </div>

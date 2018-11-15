@@ -89,7 +89,13 @@
                                     $userSlug = str_slug($user->name);
                                     $newJob = App\AssignJob::where('user_id', $user->id)->whereStatus(0)->where('notify',0)->count();
                                 @endphp
-
+                                @if($user->type == 2)
+                                <li style="background:#f1f1f1;">
+                                        <a style="background:#ecf0f1;" data-toggle="modal" data-target="#myModal">
+                                                <span class="glyphicon glyphicon-search"></span>
+                                        </a>
+                                </li>
+                                @endif
                                 <li><a href="{{route('home')}}"> @if(Auth::user()->type == 1) Recent Jobs @else Looking For An
                                         Expert @endif</a></li>
 
@@ -105,9 +111,6 @@
                                 @endif
 
                                 @if($user->type == 2)
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Search">
-                                    </div>
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                            aria-haspopup="true" aria-expanded="false"> My Projects <i
@@ -191,6 +194,32 @@
     </div>
     <!-- header-bottom end -->
 </header>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+      
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Search for freelancers</h4>
+            </div>
+            <div class="modal-body">
+                <form action="/search" method="POST" role="search">
+                {{ csrf_field() }}
+                <div class="input-group">
+                    <input type="text" class="form-control" name="q" placeholder="Search For Freelancers"><br/><br/>
+                    <input type="submit" value="Search" class="btn btn-success">
+                </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+      
+        </div>
+      </div>
 <!-- header section end -->
 <div class="clearfix"></div>
 
