@@ -38,6 +38,7 @@ class User extends Authenticatable
         return $this->belongsTo('App\Category','category_id');
     }
 
+
 //    public function WithdrawLogs()
 //    {
 //        return $this->hasMany('App\WithdrawLog', 'user_id');

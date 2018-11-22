@@ -1,5 +1,12 @@
 <?php
 
+use App\User;
+
+use App\Category;
+
+use Illuminate\Support\Facades\Input;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,6 +48,16 @@ Route::post('/contact-us', ['uses' => 'FrontendController@contactSubmit', 'as' =
 Route::post('/subscribe', 'FrontendController@subscribe')->name('subscribe');
 
 Auth::routes();
+//Search route
+Route::any('/search',function(){
+    $q = Input::get( 'q' );
+    $user = User::where('category_id','LIKE','%'.$q.'%')->get();
+    if(count($user) > 0)
+        return view('search')->withDetails($user)->withQuery ( $q );
+    else return view ('search')->withMessage('No Details found. Try to search again !');
+});
+
+Route::get('/search', 'HomeController@search');
 
 Route::group(['prefix' => 'user'], function () {
 
