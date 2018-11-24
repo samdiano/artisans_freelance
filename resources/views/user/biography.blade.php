@@ -95,7 +95,7 @@
                                     <div class="col-md-6">
                                         <div class="small-detail">
                                             <h4>Company Type</h4>
-                                            <small>{{$user->category->name or ''}}</small>
+                                            <small>{{$user->category_id or ''}}</small>
                                         </div><!-- end small -->
                                     </div>
 
@@ -150,7 +150,7 @@
                                                                     </h4>
                                                                 </td>
                                                                 <td data-label="Type">
-                                                                    <a class="default-cursor black">{{$data->category->name}}</a>
+                                                                    <a class="default-cursor black">{{$data->category_id}}</a>
                                                                 </td>
                                                             </tr>
                                                         @endforeach

@@ -33,7 +33,11 @@
                             </div><!-- end col -->
 
                             <div class="col-md-5 col-sm-5 col-xs-12">
-                                <div class="label  badge-highlight">{{$data->category->name or ' ' }}</div>
+                                @if($data->category_id == null)
+                                {{-- do nothing --}}
+                                @else
+                                <div class="label  badge-highlight">{{$data->category_id or ' ' }}</div>
+                                @endif
                                 <h3><a href="{{route('biography',[$data->id, $biography])}}">{!! $data->name or '-' !!}</a>
                                 </h3>
                                 <small>

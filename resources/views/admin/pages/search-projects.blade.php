@@ -43,7 +43,7 @@
                             @foreach($projects as $dep)
                                 <tr>
                                     <td>{{$dep->title or  ''}}</td>
-                                    <td>{{$dep->category->name or ''}}</td>
+                                    <td>{{$dep->category_id or ''}}</td>
                                     <td>
                                         <a href="{{route('user.single', $dep->user->id)}}">
                                             {{$dep->user->username or ''}}

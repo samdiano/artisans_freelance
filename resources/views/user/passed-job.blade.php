@@ -42,7 +42,7 @@
                                         </div><!-- end col -->
 
                                         <div class="col-md-7 col-sm-7 col-xs-12">
-                                            <div class="badge freelancer-badge">{{$data->project->category->name or ''}}</div>
+                                            <div class="badge freelancer-badge">{{$data->project->category_id or ''}}</div>
                                             <h3><a href="{{route('details.job',[$data->project->id,$slug])}}">{{$data->project->title or ''}}</a></h3>
                                             <small>
                                                 @php

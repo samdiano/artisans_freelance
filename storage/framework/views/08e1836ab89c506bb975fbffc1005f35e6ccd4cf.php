@@ -94,7 +94,7 @@
                                     <div class="col-md-6">
                                         <div class="small-detail">
                                             <h4>Company Type</h4>
-                                            <small><?php echo e(isset($user->category->name) ? $user->category->name : ''); ?></small>
+                                            <small><?php echo e(isset($user->category_id) ? $user->category_id : ''); ?></small>
                                         </div><!-- end small -->
                                     </div>
 
@@ -149,7 +149,7 @@
                                                                     </h4>
                                                                 </td>
                                                                 <td data-label="Type">
-                                                                    <a class="default-cursor black"><?php echo e($data->category->name); ?></a>
+                                                                    <a class="default-cursor black"><?php echo e($data->category_id); ?></a>
                                                                 </td>
                                                             </tr>
                                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

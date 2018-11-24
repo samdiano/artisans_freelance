@@ -33,7 +33,7 @@
                                     </div><!-- end col -->
 
                                     <div class="col-md-5 col-sm-5 col-xs-12">
-                                        <div class="badge part-badge">{{$data->user->category->name or ''}}</div>
+                                        <div class="badge part-badge">{{$data->user->category_id or ''}}</div>
                                         <h3 class="post-tile"><a
                                                     href="{{route('biography',[$data->user->id, $data->user->username])}}">{{$data->user->name}}</a>
                                         </h3>

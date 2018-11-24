@@ -53,7 +53,7 @@
                         </div><!-- end col -->
 
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="badge freelancer-badge">{{$project->category->name}}</div>
+                            <div class="badge freelancer-badge">{{$project->category_id}}</div>
                             <h3><a href="{{url()->current()}}">{{$project->title}}</a>
                             </h3>
                             <small>

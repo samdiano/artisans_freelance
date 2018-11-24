@@ -32,7 +32,7 @@
                             </div><!-- end col -->
 
                             <div class="col-md-5 col-sm-5 col-xs-12">
-                                <div class="label  badge-highlight"><?php echo e(isset($data->category->name) ? $data->category->name : ' -'); ?></div>
+                                <div class="label  badge-highlight"><?php echo e(isset($data->category_id) ? $data->category_id : ' -'); ?></div>
                                 <h3><a href="<?php echo e(route('details.job',[$data->id,$slug])); ?>"><?php echo e(isset($data->title) ? $data->title : '-'); ?></a>
                                 </h3>
 

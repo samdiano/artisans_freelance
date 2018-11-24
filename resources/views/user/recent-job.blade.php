@@ -33,7 +33,7 @@
                             </div><!-- end col -->
 
                             <div class="col-md-5 col-sm-5 col-xs-12">
-                                <div class="label  badge-highlight">{{ $data->category->name or ' -'}}</div>
+                                <div class="label  badge-highlight">{{ $data->category_id or ' -'}}</div>
                                 <h3><a href="{{route('details.job',[$data->id,$slug])}}">{{ $data->title or '-' }}</a>
                                 </h3>
 
